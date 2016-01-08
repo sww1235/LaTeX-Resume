@@ -1,0 +1,131 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,letterpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+\patchcmd{\makecvtitle}{[b]}{[t]}{}{}
+\patchcmd{\makecvtitle}{[b]}{[t]}{}{} % move name upwards
+% adjust the page margins
+\usepackage[scale=0.8, top=0.75in, bottom=.75in]{geometry}
+\setlength{\hintscolumnwidth}{4cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{15cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\renewcommand*{\namefont}{\fontsize{28}{40}\mdseries\upshape} %change font size of title
+
+% personal data
+\name{Stephen}{Walker-Weinshenker}
+%\title{}                               % optional, remove / comment the line if not wanted
+\address{8070 E 26th Ave}{Denver CO 80238}{United States}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+1~(720)~474~1422}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+\phone[home]{+1~(303)~316~6757}
+\email{sww1235@gmail.com}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+\social[linkedin]{Stephen Walker-Weinshenker}                        % optional, remove / comment the line if not wanted
+\social[twitter]{sww1235}                             % optional, remove / comment the line if not wanted
+\social[github]{sww1235}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+
+\begin{document}
+
+%-----       resume       ---------------------------------------------------------
+
+\makecvtitle
+\vspace*{-1cm} % remove vertical space under title and name
+
+\section{Education}
+%\cventry{2009--2013}{High School}{Denver Waldorf High School}{Denver}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
+\cventry{2013--present}{Electrical Engineering}{Colorado State University}{Fort Collins}{\textit{Junior}}{Anticipated completion date Spring 2018}
+\vspace*{-.4cm}
+
+
+%\section{Master thesis}
+%\cvitem{title}{\emph{Title}}
+%\cvitem{supervisors}{Supervisors}
+%\cvitem{description}{Short thesis abstract}
+
+\section{Experience}
+\subsection{Work}
+\cventry{2014--present}{Student Lab Technician}{Engineering Network Services}{Fort Collins}{CO}{Supported computer labs for the College of Engineering at Colorado State University. 
+\begin{itemize}
+\item Supported users of the labs;
+\item Maintained computing hardware in the labs;
+\item Maintained operating system images and software on computers in the labs.
+\end{itemize}
+}
+
+\subsection{Volunteering}
+\cventry{2011--2014}{Intern}{Aurora Fox Arts Center}{Denver}{CO}{Volunteered as a theatre lighting technician and stagehand during the summers. Designed lighting for }
+
+
+\vspace*{-.4cm}
+\section{Activities}
+\cventry{2015-Present}{Secretary}{Hashdump: Colorado State University's computer security club}{Fort Collins}{CO}{I generate topic information, generate member lists and log minutes for every meeting that requires this.}
+
+\vspace*{-.4cm}
+\section{Computer skills}
+\cvitem{Windows}{Proficient in day to day usage as well as domain functionality}
+\cvitem{Mac}{Primary operating system used. Familiar with Unix underpinnings}
+\cvitem{Linux}{Proficient in *nix OSs}
+\cvitem{Programming/Scripting}{Basic knowledge of Java and Python}
+
+\vspace*{-.4cm}
+\section{Interests}
+\cvitem{Reading}{I enjoy science and speculative fiction novels.}
+\cvitem{Designing Electronics and Robots}{I designed and built a large remote controlled vehicle, as well as designing a small belt mounted computer.}
+\cvitem{Architecture}{I have created several designs of potential houses for myself.}
+\cvitem{Systems Integration}{I enjoy learning how buildings and factory lines work, and creating proposals for how to make these systems work better in certain buildings.}
+
+\vspace*{-.4cm}
+\section{References}
+\cvitem{}{References provided upon request}
+
+
+
+\clearpage
+\newgeometry{scale=.75}
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Company Recruitment team}{Siemens USA\\300 New Jersey Avenue\\Suite 1000\\Washington, D.C. 20001}
+\date{June 19, 2015}
+\opening{To Whom It May Concern:}
+\closing{Yours faithfully,}
+\enclosure[Enclosure]{Resum\'e}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+
+I am writing to apply for your Energy Engineering Internship Program as listed on your website. Siemens has a reputation for producing innovative products and solutions in the energy industry and I believe that as an electrical engineering student, I can add insight and value to any project I may work on.
+
+I am working on a Electrical Engineering Bachelors Degree from Colorado State University and believe that this internship would complement my educational experience immensely. I also think that my three years of lighting technician experience at Aurora Fox Arts Center in Denver CO would bring a unique perspective to this internship. During my year of employment at Engineering Network Services, I have learned how to work as part of a team to complete both individual and group projects. 
+
+I am self motivating and desire to learn new things. On my own time I have taught myself how to program and hook up Arduinos and other micro-controllers well before I would have learned this in college. I also have built an 1.5 ft x 2.5 ft remote controlled car out of a desire to understand motor controllers, and remote control and battery technology.
+
+You will find more information about my education and experience in my attached resum\'e. I am happy to supply you with any completed coursework, list of job duties or other documents if needed.
+
+I thank you for considering my application. I am available to talk with you further at your convenience. I will also be attending the fall and spring Engineering Career Fairs at Colorado State University if meeting then would be more convenient.
+
+
+
+\makeletterclosing
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
