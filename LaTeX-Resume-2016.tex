@@ -1,14 +1,21 @@
-
-\documentclass[10pt,letterpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+% possible options include font size ('10pt', '11pt' and '12pt'),
+% paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper',
+% 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[10pt,letterpaper,sans]{moderncv}
 
 % moderncv themes
-\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+% style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{classic}
+% color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{blue}
+% to set the default font; use '\sfdefault' for the default sans serif font,
+% '\rmdefault' for the default roman one, or any tex font name
+%\renewcommand{\familydefault}{\sfdefault}
+% uncomment below to suppress automatic page numbering for CVs longer than one page
+\nopagenumbers{}
 
 % character encoding
-%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage[utf8]{inputenc}
 \usepackage{multicol}
 \patchcmd{\makecvtitle}{[b]}{[t]}{}{}
 \patchcmd{\makecvtitle}{[b]}{[t]}{}{} % move name upwards
@@ -20,19 +27,18 @@
 
 % personal data
 \name{Stephen}{Walker-Weinshenker}
-%\title{Resume}                               % optional, remove / comment the line if not wanted
-\address{8070 E. 26th Ave}{Denver CO 80238}{United States}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+1~(720)~474~1422}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\title{Resume}                               % optional
+\address{8070 E. 26th Ave}{Denver CO 80238}{United States}% optional
+\phone[mobile]{+1~(720)~474~1422}                   % optional, "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 \phone[home]{+1~(303)~316~6757}
-\email{sww1235@gmail.com}                               % optional, remove / comment the line if not wanted
-%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
-\social[linkedin]{Stephen Walker-Weinshenker}                        % optional, remove / comment the line if not wanted
-%\social[twitter]{sww1235}                             % optional, remove / comment the line if not wanted
-\social[github]{sww1235}                              % optional, remove / comment the line if not wanted
-%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\email{sww1235@gmail.com}                           % optional
+%\homepage{www.johndoe.com}                         % optional
+\social[linkedin]{Stephen Walker-Weinshenker}       % optional
+%\social[twitter]{sww1235}                          % optional
+\social[github]{sww1235}                            % optional
+%\extrainfo{additional information}                 % optional
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 
 \begin{document}
@@ -75,8 +81,8 @@ State University.
 \begin{itemize}
 \item Worked as part of a team to support computer lab users.
 \item Worked as part of a team to maintain and install hardware in computer labs.
-\item Worked as part of a team to manage operating system images on computers
-in computer labs.
+\item Worked as part of a team managing computer operating system images and
+software in labs
 \end{itemize}
 }
 
@@ -132,33 +138,41 @@ interested in learning more about SCADA and PLCs.}
 
 
 
-% \clearpage
-% \newgeometry{scale=.75}
-% %-----       letter       ---------------------------------------------------------
-% % recipient data
-% \recipient{Company Recruitment team}{Xcel Energy\\414 Nicollet Mall\\Minneapolis, MN 55401}
-% \date{\today}
-% \opening{To Whom It May Concern:}
-% \closing{Sincerely,}
-% \enclosure[Enclosure]{Resum\'e}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-% \makelettertitle{}
-%
-% I would like to apply for the Engineering Intern --- Colorado as listed on your website. I have a long standing interest in grid design and management as well as smart grid implementation and renewable energy. Xcel has a reputation for promoting clean energy and a reliable grid and I am excited to apply for this unique opportunity.
-%
-% Currently, I am working to complete my Bachelor's Degree in Electrical Engineering at Colorado State University and believe this internship would complement my educational experience with valuable real world experience. As an electrical engineering student, I can add insight and value to any project I may work on. During my two years of employment at Engineering Network Services, I have learned how to work as part of a team to complete both individual and group projects. I also think that my three years of lighting technician experience at Aurora Fox Arts Center in Denver CO would bring a unique perspective and valuable skills to this internship.
-%
-% I am self motivated and desire to learn new things. I taught myself how to program and hook up Arduinos and other micro-controllers well before I would have learned this in college. I also built an 1.5 ft x 2.5 ft remote controlled car out of a desire to understand motor controllers and remote control and battery technology. As part of my work at the Aurora Fox Arts Center, I taught myself the basics of 3 phase power due to our theatre having a 3 phase power feed.
-%
-% You will find more information about my education and experience in my attached resum\'e. I am happy to supply you with any completed coursework, list of job duties, references or other documents if needed.
-%
-% Thank you for considering my application. I am available to talk with you further at your convenience. I will be attending the spring Engineering Career Fair at Colorado State University if meeting then would be more convenient.
-%
-%
-%
-% \makeletterclosing{}
+\clearpage
+\newgeometry{scale=.75}
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Company Recruitment team}{Xcel Energy\\414 Nicollet Mall\\Minneapolis, MN 55401}
+\date{\today}
+\opening{To Whom It May Concern:}
+\closing{Sincerely,}
+\enclosure[Enclosure]{Resum\'e}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle{}
+
+I am seeking an electrical engineering internship for the summer of 2017.
+Currently, I am a student at Colorado State University, majoring in Electrical
+Engineering.
+
+As an electrical engineering student, I can add insight and value to any project
+I may work on. In addition to my course work, I work part-time at the College
+of Engineering for Engineering Network Services. As a lab technician, I have
+learned how to work as part of a team to complete both individual and group
+projects.
+
+I am self motivated and desire to learn new things. I taught myself how to
+program and hook up Arduinos and other micro-controllers well before I would
+have learned this in college. I also built an 1.5 ft x 2.5 ft remote controlled
+car out of a desire to understand motor controllers and remote control and
+battery technology.
+
+You will find more information about my education and experience in my attached
+resumé. I am happy to supply you with any completed coursework, list of job
+duties, references or other documents if needed.
+
+Thank you very much for considering me for an internship. I look forward to
+talking with you further.
+
+\makeletterclosing{}
 
 
 \end{document}
-
-
-%% end of file `template.tex'.
