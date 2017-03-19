@@ -28,7 +28,7 @@
 % personal data
 \name{Stephen}{Walker-Weinshenker}
 %\title{Resume}                               % optional
-\address{8070 E. 26th Ave}{Denver CO 80238}{United States}% optional
+\address{8070 E. 26th Ave}{Denver CO 80238}{}% optional
 \phone[mobile]{+1~(720)~474~1422}                   % optional, "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 \phone[home]{+1~(303)~316~6757}
@@ -46,13 +46,18 @@
 
 %TODO: note be sure to compile with make.sh or comment out, maybe fix with ifdef somehow
 
-\input{\coverLetter}
-\clearpage
+\ifdefined\coverLetter{}
+  \input{\coverLetter}
+  \clearpage
+\else
+  \message{No cover letter output}
+\fi
+
 
 %-----       resume       ---------------------------------------------------------
 \restoregeometry{}
 \makecvtitle{}
-\vspace*{-1.5cm} % remove vertical space under title and name
+\vspace*{-1.45cm} % remove vertical space under title and name
 
 \section{Education}
 %\cventry{2009--2013}{High School}{Denver Waldorf High School}{Denver}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
@@ -64,9 +69,11 @@ Relevant courses completed by Summer 2017:
 \begin{itemize}
 \item AC and DC Circuit Analysis.
 \item Digital Circuit Logic.
+\item Integrated Lighting Systems.
 \columnbreak{}
 \item Java Programming 1 \& 2.
-\item Linear Systems Analysis 1.
+\item Linear Systems Analysis 1 \& 2.
+\item Electrical Energy Generation Systems.
 \end{itemize}
 \end{multicols}
 }
