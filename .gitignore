@@ -11,6 +11,7 @@ Latex-Resume-spring-2017.pdf
 *.fls
 *.out
 *.toc
+*.synctex.*
 
 ## Intermediate documents:
 *.dvi
