@@ -14,6 +14,13 @@
 % uncomment below to suppress automatic page numbering for CVs longer than one page
 \nopagenumbers{}
 
+% cover letter fixes
+%\patchcmd{\makeletterclosing}{[3em]}{[3em]}{}{} % reduce space inbetween closing and name in cover letter
+
+\patchcmd{\makeletterhead}{[1.5em]}{[0.75em]}{}{} % space between letter and opening
+
+\patchcmd{\makeletterhead}{[2em]}{[1em]}{}{} % space between address and opening. actually is space between date and opening
+
 % character encoding
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
