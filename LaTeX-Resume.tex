@@ -1,7 +1,7 @@
 % possible options include font size ('10pt', '11pt' and '12pt'),
 % paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper',
 % 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
-\documentclass[10pt,letterpaper,sans]{moderncv}
+\documentclass[12pt,letterpaper,sans]{moderncv}
 
 % moderncv themes
 % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -27,7 +27,7 @@
 \patchcmd{\makecvtitle}{[b]}{[t]}{}{}
 \patchcmd{\makecvtitle}{[b]}{[t]}{}{} % move name upwards
 % adjust the page margins
-\usepackage[scale=0.8, top=0.75in, bottom=.75in, left=0.75in, right=0.75in]{geometry}
+\usepackage[scale=1, top=0.5in, bottom=.5in, left=0.5in, right=0.5in]{geometry}
 \setlength{\hintscolumnwidth}{3.5cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{15cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 \renewcommand*{\namefont}{\fontsize{28}{40}\mdseries\upshape} %change font size of title
@@ -64,7 +64,9 @@
 %-----       resume       ---------------------------------------------------------
 \restoregeometry{}
 \makecvtitle{}
-\vspace*{-1.45cm} % remove vertical space under title and name
+
+\vspace*{-1.43cm} % remove vertical space under title and name
+
 
 \section{Experience}
 
@@ -102,23 +104,19 @@ State University.
 \end{itemize}
 }
 
-\vspace*{-.25cm}
 \section{Achivements/Certifications/Licenses}
 \cvitem{May 2019}{Certified as Engineering Intern (EI) in Colorado by passing Fundamentals of Engineering exam.}
 \cvitem{April 2015}{Amateur Radio License --- call sign KE0DZE}
 
-\vspace*{-.4cm}
 \section{Professional Memberships}
 \cvitem{2015--Present}{Institute of Electrical and Electronics Engineers (IEEE)}
 
-\vspace*{-.4cm}
 \section{Computer Skills}
 \cvitem{Windows/Mac/Linux}{Proficient in day-to-day usage as well as systems administration.}
 \cvitem{Programming/Scripting}{Intermediate knowledge of Visual Basic for Applications, Python, Golang and Bash.}
 \cvitem{eCAD}{Proficient in Cadsoft Eagle and KiCAD.}
 \cvitem{CAD}{Proficient in Nemetschek Vectorworks, Autodesk Revit, and Dassault Systèmes SOLIDWORKS.}
 
-\vspace*{-.4cm}
 \section{Professional Skills}
 \cvitem{Distribution Automation}{Understand SCADA protocols including DNP3 and Modbus.
 		Worked with multiple vendor's RTUs and RTACs including SEL and Eaton/Cooper.
@@ -135,7 +133,6 @@ State University.
 		vehicle, designed a small belt-mounted computer, as well as several other small
 		electronics projects.}
 
-\vspace*{-.4cm}
 \section{Education}
 \cventry{May 2019}{Batchelor of Science in Electrical Engineering}{}{}{}{\textit{Colorado State University}, Fort Collins CO.}
 
