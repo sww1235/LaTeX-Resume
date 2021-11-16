@@ -35,11 +35,11 @@
 % personal data
 \name{Stephen}{Walker-Weinshenker}
 %\title{Resume}                               % optional
-\address{8070 E. 26th Ave}{Denver CO 80238}{} % optional
+\address{772 Ivy St}{Denver CO 80220}{} % optional
 \phone[mobile]{+1~(720)~474~1422}                   % optional, "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[home]{+1~(303)~316~6757}
-\email{sww1235@gmail.com}                           % optional
+\email{resume@sww1235.net}                          % optional
 %\homepage{www.johndoe.com}                         % optional
 \social[linkedin]{Stephen Walker-Weinshenker}       % optional
 %\social[twitter]{sww1235}                          % optional
@@ -54,10 +54,10 @@
 %TODO: note be sure to compile with make.sh or comment out, maybe fix with ifdef somehow
 
 \ifdefined\coverLetter{}
-  \input{\coverLetter}
-  \clearpage
+	\input{\coverLetter}
+	\clearpage
 \else
-  \message{No cover letter output}
+	\message{No cover letter output}
 \fi
 
 
@@ -66,41 +66,28 @@
 \makecvtitle{}
 \vspace*{-1.45cm} % remove vertical space under title and name
 
-\section{Education}
-%\cventry{2009--2013}{High School}{Denver Waldorf High School}{Denver}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
-\cventry{ }{Batchelor of Science in Electrical Engineering}{ }{GPA 2.79}{}{\textit{Colorado State University}, Fort Collins.\newline{}
-Relevant courses completed:
-\vspace{-0.3cm}
-\begin{multicols}{2}
-\begin{itemize}
-  \item Electrical Power Engineering
-  \item Integrated Lighting Systems
-\columnbreak{}
-  \item Electrical Energy Generation Systems.
-\end{itemize}
-\end{multicols}
-}
-
-%\section{Master thesis}
-%\cvitem{title}{\emph{Title}}
-%\cvitem{supervisors}{Supervisors}
-%\cvitem{description}{Short thesis abstract}
-
 \section{Experience}
 
-\cventry{2017--Present}{Area Engineering Intern}{Xcel Energy Inc}{Denver}{CO}{
-Helped improve field communications infrastructure for SCADA
-systems, including radios and IP networks. Helped implement new Field Area
-Network using WiMAX and WiSUN wireless technology.}
-
-\cventry{2018--2019}{Senior Design --- ECE Senior Design Lab}{Colorado State
-University}{Fort Collins}{CO}{
+\cventry{2019--Present}{Distribution Automation/Communications Engineer}{Xcel Energy Inc}{Denver}{CO}{%
 \begin{itemize}
-  \item Managed Senior Design Lab with 3 person team.
-  \item Worked with facilities department to bring lab facilites up to code.
-  \item Implemented print server for 3D printers.
-  \item Helped support other Senior Design teams.
-  \item Supported and maintained 3D printers and CNC machines.
+	\item Assisted with Xcel's grid modernization efforts, including Advanced Metering,
+		Field Area Network modernization with WiSUN and cellular modems and supporting
+		their new Advanced Distribution Monitoring System.
+	\item Developed islanding logic for new community scale microgrid implementations.
+	\item Engineered communication solution for Direct Transfer Trip implementation
+		using high speed radios and am leading standardization efforts for these
+		projects.
+	\item Co-developed and architected a device management database to allow multiple
+		teams to efficiently share and work with device data.
+	\item Assisted with developing Xcel's Operational Technology security policies.
+\end{itemize}
+}
+
+\cventry{2017--2019}{Area Engineering Intern}{Xcel Energy Inc}{Denver}{CO}{%
+\begin{itemize}
+	\item Helped improve field communications infrastructure for SCADA
+		systems, including radios and IP networks.
+	\item Helped implement new Field Area Network using WiMAX and WiSUN wireless technology.
 \end{itemize}
 }
 
@@ -108,46 +95,49 @@ University}{Fort Collins}{CO}{
 Collins}{CO}{Supported computer labs for the College of Engineering at Colorado
 State University.
 \begin{itemize}
-  \item Worked as part of a team to support computer lab users.
-  \item Worked as part of a team to maintain and install hardware in computer labs.
-  \item Worked as part of a team managing computer operating system images and
-software in labs.
+	\item Maintained and install hardware in computer labs.
+	\item Worked as part of a team managing computer operating system images and
+		software in labs.
+	\item Supported computer lab users.
 \end{itemize}
 }
+
 \vspace*{-.25cm}
-\section{Achivements/Certifications}
-\cvitem{May 2019}{Passed Fundamentals of Engineering exam}
+\section{Achivements/Certifications/Licenses}
+\cvitem{May 2019}{Certified as Engineering Intern (EI) in Colorado by passing Fundamentals of Engineering exam.}
+\cvitem{April 2015}{Amateur Radio License --- call sign KE0DZE}
 
 \vspace*{-.4cm}
 \section{Professional Memberships}
-\cvitem{2015--Present}{Institute of Electrical and Electronics Engineers (IEEE).}
-
-\vspace*{-.4cm}
-\section{Activities}
-\cventry{2016--2018}{President}{Hashdump: Colorado State University's
-security club}{Fort Collins}{CO}{(Member since 2015)}
-\cventry{2016--2017}{President}{Colorado State University Amateur Radio
-Club}{Fort Collins}{CO}{(Member since 2015). Call sign KE0DZE}
+\cvitem{2015--Present}{Institute of Electrical and Electronics Engineers (IEEE)}
 
 \vspace*{-.4cm}
 \section{Computer Skills}
 \cvitem{Windows/Mac/Linux}{Proficient in day-to-day usage as well as systems administration.}
-\cvitem{Programming/Scripting}{Basic knowledge of Java, Python, C, Golang and Bash.}
+\cvitem{Programming/Scripting}{Intermediate knowledge of Visual Basic for Applications, Python, Golang and Bash.}
 \cvitem{eCAD}{Proficient in Cadsoft Eagle and KiCAD.}
 \cvitem{CAD}{Proficient in Nemetschek Vectorworks, Autodesk Revit, and Dassault Systèmes SOLIDWORKS.}
 
 \vspace*{-.4cm}
-\section{Professional Experience and Skills}
+\section{Professional Skills}
+\cvitem{Distribution Automation}{Understand SCADA protocols including DNP3 and Modbus.
+		Worked with multiple vendor's RTUs and RTACs including SEL and Eaton/Cooper.
+		Have a proficient understanding of logic development for these platforms.}
+\cvitem{Troubleshooting}{Skilled in troubleshooting electrical and communications equipment.}
+\cvitem{Documentation}{Good at writing technical documentation for both technical and non-technical audiences.}
 \cvitem{Systems Security}{Enjoy learning about all aspects of security,
-including physical security and network security. As a member of Hashdump, we
-won second place at the Rocky Mountain Collegate Cyber Defense Competition in
-Spring 2016 and Spring 2018 and third place in Spring 2017.}
+		including physical security and network security. Was President of the Security Club
+		at CSU for four years, and have been participating in Xcel Energy's
+		Operational Technology security discussions.}
 \cvitem{Systems Integration}{Have experience with programming and physical
-integration of automation controllers and automated devices. Also have
-experience with automation protocols such as DNP3 and ModBus.}
+		integration of automation controllers and automated devices.}
 \cvitem{Designing Electronics and Robots}{Designed and built a remote controlled
- vehicle, designed a small belt-mounted computer, as well as several other small
- electronics projects.}
+		vehicle, designed a small belt-mounted computer, as well as several other small
+		electronics projects.}
+
+\vspace*{-.4cm}
+\section{Education}
+\cventry{May 2019}{Batchelor of Science in Electrical Engineering}{}{}{}{\textit{Colorado State University}, Fort Collins CO.}
 
 
 \end{document}
