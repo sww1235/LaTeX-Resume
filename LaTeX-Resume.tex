@@ -27,8 +27,8 @@
 \patchcmd{\makecvtitle}{[b]}{[t]}{}{}
 \patchcmd{\makecvtitle}{[b]}{[t]}{}{} % move name upwards
 % adjust the page margins
-\usepackage[scale=1, top=0.5in, bottom=.5in, left=0.5in, right=0.5in]{geometry}
-\setlength{\hintscolumnwidth}{3.5cm}                % if you want to change the width of the column with the dates
+\usepackage[scale=1, top=0.75in, bottom=.75in, left=0.75in, right=0.75in]{geometry}
+\setlength{\hintscolumnwidth}{3.9cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{15cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 \renewcommand*{\namefont}{\fontsize{28}{40}\mdseries\upshape} %change font size of title
 
@@ -49,6 +49,16 @@
 
 % TODO: Reminder: use tags to separate resume versions
 
+%https://tex.stackexchange.com/a/108909/73081
+\makeatletter
+\newcommand*{\ccvitem}[3][.25em]{%
+	\begin{tabular}{@{}m{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}m{\maincolumnwidth}@{}}%
+		\raggedleft\hintstyle{#2} &{#3}%
+	\end{tabular}%
+	\par\addvspace{#1}}
+\makeatother
+
+
 \begin{document}
 
 %TODO: note be sure to compile with make.sh or comment out, maybe fix with ifdef somehow
@@ -65,7 +75,7 @@
 \restoregeometry{}
 \makecvtitle{}
 
-\vspace*{-1.43cm} % remove vertical space under title and name
+\vspace*{-1.3cm} % remove vertical space under title and name
 
 
 \section{Experience}
@@ -74,7 +84,7 @@
 \begin{itemize}
 	\item Assisted with Xcel's grid modernization efforts, including Advanced Metering,
 		Field Area Network modernization with WiSUN and cellular modems.
-	\item Supporting Xcel's new Advanced Distribution Monitoring System deployment
+	\item Supported Xcel's new Advanced Distribution Monitoring System deployment
 		by establishing and troubleshooting communcations to field equipment.
 	\item Developed islanding logic for new community scale microgrid implementations.
 	\item Engineered communication solution for Direct Transfer Trip implementation
@@ -89,8 +99,9 @@
 \cventry{2017--2019}{Area Engineering Intern}{Xcel Energy Inc}{Denver}{CO}{%
 \begin{itemize}
 	\item Improved field communications infrastructure for SCADA
-		systems, including radios and IP networks.
+		systems, including \newline radios and IP networks.
 	\item Implemented new Field Area Network using WiMAX and WiSUN wireless technology.
+	\item Performed field wireless propagation surveys to confirm chosen field locations would perform to standard.
 \end{itemize}
 }
 
@@ -101,44 +112,49 @@ State University:
 	\item Maintained and installed Audio/Visual and computer hardware in computer labs.
 		Supported over 10 lab spaces and 240+ workstations.
 	\item Worked as part of a team managing computer operating system images and
-		software deployments in the engineering computer labs for 10 different engineering departments.
+		software deployments in the engineering computer labs for 10 different \newline
+		engineering departments.
 	\item Supported over 400 lab users including students and professors.
-	\item Designed a low cost projector remote control to eliminate IR interference issues
+	\item Designed a low-cost projector remote control to eliminate IR interference issues
 		and battery replacements for lab spaces with multiple projectors.
 \end{itemize}
 }
 
 \section{Certifications/Licenses}
-\cvitem{May 2019}{Certified as Engineering Intern (EI) in Colorado; Passed Fundamentals of Engineering exam.}
+\cvitem{May 2019}{Certified as Engineering Intern (EI) in Colorado; \newline Passed Fundamentals of Engineering exam.}
 \cvitem{April 2015}{Amateur Radio License --- call sign KE0DZE.}
 
 \section{Professional Memberships}
 \cvitem{2015--Present}{Institute of Electrical and Electronics Engineers (IEEE).}
 
+\newpage
+
 \section{Computer Skills}
-\cvitem{Windows/Mac/Linux}{Proficient in day-to-day usage as well as systems administration.}
-\cvitem{Programming/Scripting}{Intermediate knowledge of Visual Basic for Applications, Python, Golang and Bash.}
-\cvitem{eCAD}{Proficient in Cadsoft Eagle and KiCAD.}
-\cvitem{CAD}{Proficient in Nemetschek Vectorworks, Autodesk Revit, and Dassault Systèmes SOLIDWORKS.}
+\ccvitem{Operating Systems}{Proficient in day-to-day usage of Windows, Linux, FreeBSD/OpenBSD and MacOS as well as
+	systems administration of all previously mentioned \newline operating systems.}
+% https://tex.stackexchange.com/a/72779/73081
+\ccvitem{Programming/Scripting}{Intermediate knowledge of Visual Basic for Applications, Python, \newline Golang and Bash.}
+\ccvitem{eCAD}{Proficient in Cadsoft Eagle and KiCAD.}
+\ccvitem{CAD}{Proficient in Nemetschek Vectorworks, Autodesk Revit,\newline and Dassault Systèmes SOLIDWORKS.}
 
 \section{Professional Skills}
-\cvitem{Distribution Automation}{Understand SCADA protocols including DNP3 and Modbus.
+\ccvitem{Distribution Automation}{Understand SCADA protocols including DNP3 and Modbus.
 		Worked with multiple vendor's RTUs and RTACs, including SEL and Eaton/Cooper.
 		Proficient understanding of logic development for these platforms.}
-\cvitem{Troubleshooting}{Skilled in troubleshooting electrical and communications equipment.}
-\cvitem{Documentation}{Skilled at writing technical documentation for both technical and non-technical audiences.}
-\cvitem{Systems Security}{Knowledgeable about all aspects of security,
+\ccvitem{Troubleshooting}{Skilled in troubleshooting electrical and communications equipment.}
+\ccvitem{Documentation}{Skilled at writing technical documentation for both technical and \newline non-technical audiences.}
+\ccvitem{Systems Security}{Knowledgeable about all aspects of security,
 		including physical security and network security. Was President of the Security Club
 		at CSU for four years, and have been participating in Xcel Energy's
-		Operational Technology security discussions.}
-\cvitem{Systems Integration}{Experienced with programming and physical
+		Operational Technology \newline security discussions.}
+\ccvitem{Systems Integration}{Experienced with programming and physical
 		integration of automation controllers and automated devices.}
-\cvitem{Designing Electronics and Robots}{Designed and built a remote controlled
+\ccvitem{Electronics Design and Robotics}{Designed and built a remote controlled
 		vehicle, designed a small belt-mounted computer, as well as multiple other small
 		electronics projects.}
 
 \section{Education}
-\cventry{May 2019}{Batchelor of Science in Electrical Engineering}{}{}{}{\textit{Colorado State University}, Fort Collins CO.}
+\cventry{May 2019}{Bachelor of Science in Electrical Engineering}{}{}{}{\textit{Colorado State University}, Fort Collins CO}
 
 
 \end{document}
