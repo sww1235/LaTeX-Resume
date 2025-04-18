@@ -1,0 +1,9 @@
+cm-super
+luatex
+xetex
+pfg
+# might only need latex-bin but need to verify
+collection-latex
+collection-basic
+pdftex
+moderncv
