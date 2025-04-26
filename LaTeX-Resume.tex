@@ -1,13 +1,13 @@
 % possible options include font size ('10pt', '11pt' and '12pt'),
 % paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper',
 % 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
-\documentclass[12pt,letterpaper,sans]{moderncv}
+\documentclass[11pt,letterpaper,sans]{moderncv}
 
 % moderncv themes
-% style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvstyle{classic}
 % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 \moderncvcolor{blue}
+% style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{classic}
 % to set the default font; use '\sfdefault' for the default sans serif font,
 % '\rmdefault' for the default roman one, or any tex font name
 %\renewcommand{\familydefault}{\sfdefault}
@@ -78,7 +78,7 @@
 \vspace*{-1.3cm} % remove vertical space under title and name
 
 
-\section{Experience}
+\section{Professional Experience}
 
 \cventry{2019--Present}{Distribution Automation/Communications Engineer}{Xcel Energy Inc}{Denver}{CO}{%
 \begin{itemize}
@@ -86,13 +86,23 @@
 		Field Area Network modernization with WiSUN and cellular modems.
 	\item Supported Xcel's new Advanced Distribution Monitoring System deployment
 		by establishing and troubleshooting communcations to field equipment.
-	\item Developed islanding logic for new community scale microgrid implementations.
-	\item Engineered communication solution for Direct Transfer Trip implementation
+	\item Developed islanding logic for new community scale microgrid implementations,
+		including integration with battery and DER controllers.
+	\item Engineered and Standardized communication solution for Direct Transfer Trip implementation
 		using high speed radios and am leading standardization efforts for these
 		projects.
-	\item Co-developed and architected a device management database to allow multiple
+	\item Co-developed and architected a device management database in Microsoft Access to allow multiple
 		teams to efficiently share and work with device data.
+	\item Developed the schema and data structure for the replacement of the MS Access database.
+		The new schema is 3rd Normal Form compliant and mirrored the structure of other core
+		company systems allowing easier integration between systems.
 	\item Assisted with developing Xcel's Operational Technology security policies.
+	\item Supported Downtown Network Monitoring deployment in Minnesota, including
+		SCADA integration and testing.
+	\item Developed and tested an integrated monitoring solution for MicroAT ATO controls using
+		the Novatech Orion MX which allows for detection and notification of power outages on both feeders.
+	\item Wrote several iterations of scripts allowing faster data import into Itron Gridscape.
+	\item Rewrote and significantly expanded the Xcel Communications Standards Manual.
 \end{itemize}
 }
 
@@ -105,53 +115,71 @@
 \end{itemize}
 }
 
-\cventry{2014--2019}{Lab Technician}{Engineering Network Services}{Fort
-Collins}{CO}{Supported computer labs for the College of Engineering at Colorado
-State University:
-\begin{itemize}
-	\item Maintained and installed Audio/Visual and computer hardware in computer labs.
-		Supported over 10 lab spaces and 240+ workstations.
-	\item Worked as part of a team managing computer operating system images and
-		software deployments in the engineering computer labs for 10 different \newline
-		engineering departments.
-	\item Supported over 400 lab users including students and professors.
-	\item Designed a low-cost projector remote control to eliminate IR interference issues
-		and battery replacements for lab spaces with multiple projectors.
-\end{itemize}
-}
+%\cventry{2014--2019}{Lab Technician}{Engineering Network Services}{Fort
+%Collins}{CO}{Supported computer labs for the College of Engineering at Colorado
+%State University:
+%\begin{itemize}
+%	\item Maintained and installed Audio/Visual and computer hardware in computer labs.
+%		Supported over 10 lab spaces and 240+ workstations.
+%	\item Worked as part of a team managing computer operating system images and
+%		software deployments in the engineering computer labs for 10 different \newline
+%		engineering departments.
+%	\item Supported over 400 lab users including students and professors.
+%	\item Designed a low-cost projector remote control to eliminate IR interference issues
+%		and battery replacements for lab spaces with multiple projectors.
+%\end{itemize}
+%}
 
 \section{Certifications/Licenses}
+\cvitem{March 2025}{Licensed as a Professional Engineerin in Colorado: PE.0066180}
 \cvitem{May 2019}{Certified as Engineering Intern (EI) in Colorado; \newline Passed Fundamentals of Engineering exam.}
 \cvitem{April 2015}{Amateur Radio License --- call sign KE0DZE.}
 
-\section{Professional Memberships}
-\cvitem{2015--Present}{Institute of Electrical and Electronics Engineers (IEEE).}
+%\section{Professional Memberships}
+%\cvitem{2015--Present}{Institute of Electrical and Electronics Engineers (IEEE).}
 
-\newpage
+%\newpage
+
+\section{Professional Skills}
+\ccvitem{Distribution Automation}{Familiar with operation and troubleshooting of SCADA protocols including DNP3, Modbus and Mirrored Bits.}
+\ccvitem{Distribution Automation}{Worked with multiple vendor's RTUs and RTACs, including SEL, S\&C  and Eaton/Cooper.
+	Proficient understanding of logic development for these platforms.}
+\ccvitem{Distribution Automation}{Experience with distribution equipment such as RTACs, PLCs and
+	Automation/Protection Controllers for Reclosers, Capacitor banks,
+	Automated Switchgear, Voltage Regulators and Source Transfer equipment.}
+\ccvitem{Distribution Automation}{In depth experience programming and troubleshooting Automated equipment
+	using software such as S\&C Intellilink, SEL AcSELerator Quickset, SEL AcSELerator RTAC,
+	Eaton Proview 5.0, Eaton Proview NXG, and Novatech NCD.}
+\ccvitem{Radios and Communications}{Experience with troubleshooting and programming Itron WiSUN
+	equipment including Access Points, Relays, Bridges and WiSUN NICs. Familar with
+	the Itron UtilityIQ suite, especially the GridScape configuration tool.}
+\ccvitem{Radios and Communications}{Extensive experience programming and troubleshooting cellular radios,
+	including the RV50 series of cellular modems from Sierra Wireless/Semtech.}
+\ccvitem{SCADA}{Familar with Schneider Electric ADMS SCADA platform, including troubleshooting device communcations and protocol configuration.}
+\ccvitem{IT and Networking}{Experience troubleshooting at all layers of network stacks,
+	including physical, TCP/IP and higher level protocols and using Wireshark protocol analyzer software.}
+\ccvitem{IT and Networking}{Experience programming and troubleshooting network equipment including Ruggedcom switches and routers.}
+\ccvitem{IT and Networking}{Familar with design and layout of networks for redundancy and efficiency. Specific experience
+	with \newline specific experience with the Ruggedccom Expanded Rapid Spanning Tree (xRSTP) protocol.}
+\ccvitem{Mechanical Design}{Layout and design of equipment enclosures and mounting hardware for electrical equipment, antennas and cable supports.}
+\ccvitem{Troubleshooting}{Skilled in troubleshooting electrical and communications equipment.}
+\ccvitem{Documentation}{Skilled at writing technical documentation for both technical and \newline non-technical audiences.}
+\ccvitem{Systems Security}{Knowledgeable about all aspects of security, including physical security and network security.
+		Routinely interface with Xcel ESEM engineers around OT and network security of Automation and Communication Assets.}
+%\ccvitem{Systems Integration}{Experienced with programming and physical
+%		integration of automation controllers and automated devices.}
+%\ccvitem{Electronics Design and Robotics}{Designed and built a remote controlled
+%		vehicle, designed a small belt-mounted computer, as well as multiple other small
+%		electronics projects.}
 
 \section{Computer Skills}
 \ccvitem{Operating Systems}{Proficient in day-to-day usage of Windows, Linux, FreeBSD/OpenBSD and MacOS as well as
 	systems administration of all previously mentioned \newline operating systems.}
-% https://tex.stackexchange.com/a/72779/73081
-\ccvitem{Programming/Scripting}{Intermediate knowledge of Visual Basic for Applications, Python, \newline Golang and Bash.}
-\ccvitem{eCAD}{Proficient in Cadsoft Eagle and KiCAD.}
-\ccvitem{CAD}{Proficient in Nemetschek Vectorworks, Autodesk Revit,\newline and Dassault Systèmes SOLIDWORKS.}
+\ccvitem{Programming/Scripting}{Intermediate knowledge of Visual Basic for Applications, Python, \newline Rust and Bash.
+	Able to quickly familiarize myself with other programming languages as job requirements change.}
+\ccvitem{eCAD}{Proficient in PCB design in KiCAD.}
+\ccvitem{CAD}{Proficient in Nemetschek Vectorworks, Autodesk Revit and Autocad, FreeCAD,\newline and Dassault Systèmes SOLIDWORKS.}
 
-\section{Professional Skills}
-\ccvitem{Distribution Automation}{Understand SCADA protocols including DNP3 and Modbus.
-		Worked with multiple vendor's RTUs and RTACs, including SEL and Eaton/Cooper.
-		Proficient understanding of logic development for these platforms.}
-\ccvitem{Troubleshooting}{Skilled in troubleshooting electrical and communications equipment.}
-\ccvitem{Documentation}{Skilled at writing technical documentation for both technical and \newline non-technical audiences.}
-\ccvitem{Systems Security}{Knowledgeable about all aspects of security,
-		including physical security and network security. Was President of the Security Club
-		at CSU for four years, and have been participating in Xcel Energy's
-		Operational Technology \newline security discussions.}
-\ccvitem{Systems Integration}{Experienced with programming and physical
-		integration of automation controllers and automated devices.}
-\ccvitem{Electronics Design and Robotics}{Designed and built a remote controlled
-		vehicle, designed a small belt-mounted computer, as well as multiple other small
-		electronics projects.}
 
 \section{Education}
 \cventry{May 2019}{Bachelor of Science in Electrical Engineering}{}{}{}{\textit{Colorado State University}, Fort Collins CO}
