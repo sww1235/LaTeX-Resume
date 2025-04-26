@@ -3,6 +3,9 @@ inputs.txt
 completed/
 Latex-Resume-spring-2017.pdf
 
+## Editor files
+*.swp
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
