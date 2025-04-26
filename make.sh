@@ -1,6 +1,6 @@
 #! /bin/bash
 
-ls -1 ~/Personal/job-career-stuff/job-search-winter-2018-2019/company-specific-cover-letters/*.tex > inputs.txt
+#ls -1 ~/Personal/job-career-stuff/job-search-winter-2018-2019/company-specific-cover-letters/*.tex > inputs.txt
 
 while read file
 do
