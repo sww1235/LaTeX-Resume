@@ -28,8 +28,7 @@
 \patchcmd{\makecvtitle}{[b]}{[t]}{}{} % move name upwards
 % adjust the page margins
 \usepackage[scale=1, top=0.75in, bottom=.75in, left=0.75in, right=0.75in]{geometry}
-\setlength{\hintscolumnwidth}{3.9cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{15cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\setlength{\hintscolumnwidth}{3.8cm}                % if you want to change the width of the column with the dates
 \renewcommand*{\namefont}{\fontsize{28}{40}\mdseries\upshape} %change font size of title
 
 % personal data
@@ -49,7 +48,7 @@
 
 % TODO: Reminder: use tags to separate resume versions
 
-%https://tex.stackexchange.com/a/108909/73081
+%https://tex.stackexchange.com/a/108909
 \makeatletter
 \newcommand*{\ccvitem}[3][.25em]{%
 	\begin{tabular}{@{}m{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}m{\maincolumnwidth}@{}}%
@@ -57,6 +56,19 @@
 	\end{tabular}%
 	\par\addvspace{#1}}
 \makeatother
+
+%https://tex.stackexchange.com/a/86658
+% the following definition is from the file moderncvstyleclassic.sty
+\renewcommand*{\cventry}[7][.25em]{%
+	\cvitem[#1]{#2}{%
+	{\bfseries#3}%
+%	\ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}% I changed this line (with comma) ...
+	\ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}% ... into this one (without comma).
+	\ifthenelse{\equal{#5}{}}{}{, #5}%
+	\ifthenelse{\equal{#6}{}}{}{ #6}%
+	.\strut%
+	\ifx&#7&%
+	\else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
 
 
 \begin{document}
@@ -82,15 +94,14 @@
 
 \cventry{2019--Present}{Distribution Automation/Communications Engineer}{Xcel Energy Inc}{Denver}{CO}{%
 \begin{itemize}
-	\item Assisted with Xcel's grid modernization efforts, including Advanced Metering,
+	\item Assisted with Xcel's grid modernization efforts, including Advanced Metering and
 		Field Area Network modernization with WiSUN and cellular modems.
 	\item Supported Xcel's new Advanced Distribution Monitoring System deployment
 		by establishing and troubleshooting communcations to field equipment.
 	\item Developed islanding logic for new community scale microgrid implementations,
 		including integration with battery and DER controllers.
-	\item Engineered and Standardized communication solution for Direct Transfer Trip implementation
-		using high speed radios and am leading standardization efforts for these
-		projects.
+	\item Engineered and standardized communication solution for Direct Transfer Trip implementation
+		using high-speed radios and led standardization efforts for these projects.
 	\item Co-developed and architected a device management database in Microsoft Access to allow multiple
 		teams to efficiently share and work with device data.
 	\item Developed the schema and data structure for the replacement of the MS Access database.
@@ -111,7 +122,7 @@
 	\item Improved field communications infrastructure for SCADA
 		systems, including \newline radios and IP networks.
 	\item Implemented new Field Area Network using WiMAX and WiSUN wireless technology.
-	\item Performed field wireless propagation surveys to confirm chosen field locations would perform to standard.
+	\item Performed field wireless propagation surveys to confirm chosen field locations would \newline communicate as designed.
 \end{itemize}
 }
 
@@ -131,9 +142,9 @@
 %}
 
 \section{Certifications/Licenses}
-\cvitem{March 2025}{Licensed as a Professional Engineerin in Colorado: PE.0066180}
-\cvitem{May 2019}{Certified as Engineering Intern (EI) in Colorado; \newline Passed Fundamentals of Engineering exam.}
-\cvitem{April 2015}{Amateur Radio License --- call sign KE0DZE.}
+\cvitem[0.75em]{March 2025}{Licensed as a Professional Engineer (PE) in Colorado: PE.0066180.}
+\cvitem[0.75em]{May 2019}{Certified as Engineering Intern (EI) in Colorado.}
+\cvitem[0.75em]{April 2015}{Amateur Radio License --- call sign KE0DZE.}
 
 %\section{Professional Memberships}
 %\cvitem{2015--Present}{Institute of Electrical and Electronics Engineers (IEEE).}
@@ -141,44 +152,65 @@
 %\newpage
 
 \section{Professional Skills}
-\ccvitem{Distribution Automation}{Familiar with operation and troubleshooting of SCADA protocols including DNP3, Modbus and Mirrored Bits.}
-\ccvitem{Distribution Automation}{Worked with multiple vendor's RTUs and RTACs, including SEL, S\&C  and Eaton/Cooper.
+\ccvitem[0.75em]{Distribution Automation}{Familiar with operation and troubleshooting of SCADA protocols including DNP3, Modbus and Mirrored Bits.}
+
+\ccvitem[0.75em]{Distribution Automation}{Worked with multiple vendor's RTUs and RTACs, including SEL, S\&C and Eaton/Cooper.
 	Proficient understanding of logic development for these platforms.}
-\ccvitem{Distribution Automation}{Experience with distribution equipment such as RTACs, PLCs and
-	Automation/Protection Controllers for Reclosers, Capacitor banks,
+
+\ccvitem[0.75em]{Distribution Automation}{Experience with distribution equipment such as RTACs, PLCs and
+	Automation/Protection Controllers for Reclosers, Capacitor Banks,
 	Automated Switchgear, Voltage Regulators and Source Transfer equipment.}
-\ccvitem{Distribution Automation}{In depth experience programming and troubleshooting Automated equipment
+
+\ccvitem[0.75em]{Distribution Automation}{In-depth experience programming and troubleshooting Automated equipment
 	using software such as S\&C Intellilink, SEL AcSELerator Quickset, SEL AcSELerator RTAC,
 	Eaton Proview 5.0, Eaton Proview NXG, and Novatech NCD.}
-\ccvitem{Radios and Communications}{Experience with troubleshooting and programming Itron WiSUN
+
+\ccvitem[0.75em]{Radios and Communications}{Experience with troubleshooting and programming Itron WiSUN
 	equipment including Access Points, Relays, Bridges and WiSUN NICs. Familar with
 	the Itron UtilityIQ suite, especially the GridScape configuration tool.}
-\ccvitem{Radios and Communications}{Extensive experience programming and troubleshooting cellular radios,
+
+\ccvitem[0.75em]{Radios and Communications}{Extensive experience programming and troubleshooting cellular radios,
 	including the RV50 series of cellular modems from Sierra Wireless/Semtech.}
-\ccvitem{SCADA}{Familar with Schneider Electric ADMS SCADA platform, including troubleshooting device communcations and protocol configuration.}
-\ccvitem{IT and Networking}{Experience troubleshooting at all layers of network stacks,
+
+\ccvitem[0.75em]{SCADA}{Familar with Schneider Electric ADMS SCADA platform, including troubleshooting
+	device communcations and protocol configuration.}
+
+\ccvitem[0.75em]{IT and Networking}{Experience troubleshooting at all layers of network stacks,
 	including physical, TCP/IP and higher level protocols and using Wireshark protocol analyzer software.}
+
 \ccvitem{IT and Networking}{Experience programming and troubleshooting network equipment including Ruggedcom switches and routers.}
-\ccvitem{IT and Networking}{Familar with design and layout of networks for redundancy and efficiency. Specific experience
-	with \newline specific experience with the Ruggedccom Expanded Rapid Spanning Tree (xRSTP) protocol.}
-\ccvitem{Mechanical Design}{Layout and design of equipment enclosures and mounting hardware for electrical equipment, antennas and cable supports.}
-\ccvitem{Troubleshooting}{Skilled in troubleshooting electrical and communications equipment.}
-\ccvitem{Documentation}{Skilled at writing technical documentation for both technical and \newline non-technical audiences.}
-\ccvitem{Systems Security}{Knowledgeable about all aspects of security, including physical security and network security.
-		Routinely interface with Xcel ESEM engineers around OT and network security of Automation and Communication Assets.}
-%\ccvitem{Systems Integration}{Experienced with programming and physical
+
+\ccvitem[0.75em]{IT and Networking}{Familar with design and layout of networks for redundancy and efficiency. Specific experience
+	with specific experience with the Ruggedcom Expanded Rapid Spanning Tree (xRSTP) protocol.}
+
+\ccvitem[0.75em]{Mechanical Design}{Layout and design of equipment enclosures and mounting
+	hardware for electrical equipment, antennas and cable supports.}
+
+\ccvitem[0.75em]{Troubleshooting}{Skilled in troubleshooting electrical and communications equipment.}
+
+\ccvitem[0.75em]{Documentation}{Skilled at writing technical documentation for both technical and \newline non-technical audiences.}
+
+\ccvitem[0.75em]{Systems Security}{Knowledgeable about all aspects of security, including physical security and network security.
+	Routinely interface with Xcel ESEM engineers around OT and network security of Automation and Communication Assets.}
+
+%\ccvitem[0.75em]{Systems Integration}{Experienced with programming and physical
 %		integration of automation controllers and automated devices.}
-%\ccvitem{Electronics Design and Robotics}{Designed and built a remote controlled
+%\ccvitem[0.75em]{Electronics Design and Robotics}{Designed and built a remote controlled
 %		vehicle, designed a small belt-mounted computer, as well as multiple other small
 %		electronics projects.}
 
 \section{Computer Skills}
-\ccvitem{Operating Systems}{Proficient in day-to-day usage of Windows, Linux, FreeBSD/OpenBSD and MacOS as well as
-	systems administration of all previously mentioned \newline operating systems.}
-\ccvitem{Programming/Scripting}{Intermediate knowledge of Visual Basic for Applications, Python, \newline Rust and Bash.
+\ccvitem[0.75em]{Operating Systems}{Proficient user of Windows, Linux, FreeBSD/OpenBSD and MacOS.}
+
+\ccvitem[0.75em]{Operating Systems}{Proficient in systems administration of the above mentioned operating systems.
+	These skills are practiced in a lab enviroment at home.}
+
+\ccvitem[0.75em]{Programming/Scripting}{Intermediate knowledge of Visual Basic for Applications, Python, Rust and Bash.\newline
 	Able to quickly familiarize myself with other programming languages as job requirements change.}
-\ccvitem{eCAD}{Proficient in PCB design in KiCAD.}
-\ccvitem{CAD}{Proficient in Nemetschek Vectorworks, Autodesk Revit and Autocad, FreeCAD,\newline and Dassault Systèmes SOLIDWORKS.}
+
+\ccvitem[0.75em]{eCAD}{Proficient in PCB design in KiCAD.}
+
+\ccvitem[0.75em]{CAD}{Proficient in Nemetschek Vectorworks, Autodesk Revit and Autocad, FreeCAD and Dassault Systèmes SOLIDWORKS.}
 
 
 \section{Education}
